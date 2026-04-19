@@ -45,4 +45,22 @@ H2 {
 .box{
     width: 200px;
     height: 200px;
-}   
+}  
+
+.Aboutme{
+    color: #F2EAE0;
+    font-family: "Noto sans", sans-serif;
+    font-weight: 700;
+    font-size: 20px;  
+     
+}
+
+.p1{
+   
+    color: #F2EAE0;
+    font-family: "Noto sans", sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    margin-right:8cm;
+    font-size: 20px;
+}
