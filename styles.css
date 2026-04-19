@@ -51,7 +51,7 @@ H2 {
     color: #F2EAE0;
     font-family: "Noto sans", sans-serif;
     font-weight: 700;
-    font-size: 20px;  
+    font-size: 40px;  
      
 }
 
@@ -62,5 +62,32 @@ H2 {
     font-style: italic;
     font-weight: 500;
     margin-right:8cm;
-    font-size: 20px;
+    font-size: 30px;
 }
+
+.sbox-skill{
+    color: #F2EAE0;
+    font-family: "Noto sans", sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    margin-right:8cm;
+    font-size: 30px;
+}
+
+.contacts {
+    color: #F2EAE0;
+    font-family: "Noto sans", sans-serif;
+    font-weight: 700;
+    font-size: 40px;  
+}
+
+.sbox-contact{
+    color: #F2EAE0;
+    font-family: "Noto sans", sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    margin-right:8cm;
+    font-size: 30px;
+}
+
+
