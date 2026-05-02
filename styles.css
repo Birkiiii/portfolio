@@ -41,7 +41,7 @@ H2 {
 }  
 
 .Aboutme{
-    color: #F2EAE0;
+    color:#222;
     font-family: "Noto sans", sans-serif;
     font-weight: 700;
     font-size: 30px;  
@@ -50,7 +50,7 @@ H2 {
 
 .p1{
    
-    color: #F2EAE0;
+    color:#222;
     font-family: "Noto sans", sans-serif;
     font-style: italic;
     font-weight: 500;
@@ -59,7 +59,7 @@ H2 {
 }
 
 .sbox-skill{
-    color: #F2EAE0;
+    color: #222;
     font-family: "Noto sans", sans-serif;
     font-style: italic;
     font-weight: 500;
@@ -68,14 +68,14 @@ H2 {
 }
 
 .contacts {
-    color: #F2EAE0;
+    color: #222;
     font-family: "Noto sans", sans-serif;
     font-weight: 700;
     font-size: 30px;  
 }
 
 .sbox-contact{
-    color: #F2EAE0;
+    color: #222;
     font-family: "Noto sans", sans-serif;
     font-style: italic;
     font-weight: 500;
@@ -89,7 +89,7 @@ H2 {
 }
 
 .navbar {
-    width: 100%;
+    width: 97%;
     background-color: #222;
     padding: 15px 30px;
 
