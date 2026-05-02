@@ -3,15 +3,6 @@ body {
     background-color: #e2e1d8;
 }
 
-.container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-}
-
 #name {
     color: #222;
 }
@@ -22,17 +13,6 @@ h1 {
 
 H2 {
     color: aliceblue;
-}
-
-.container2{
-
-    display: flex;
-    flex-direction: row;
-    justify-content:center;
-    height: 400px;
-    align-items: center;
-    column-gap: 100px;
-    padding-right: 600px;
 }
 
 .box{
@@ -46,6 +26,28 @@ H2 {
     font-weight: 700;
     font-size: 30px;  
      
+}
+
+/* About me Page */
+
+#dp{
+    width: 100%;
+    max-width: 400px;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+.wrapper{
+    padding: 0 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5rem;
+}
+
+.intro{
+    flex: 1;
 }
 
 .p1{
@@ -89,7 +91,7 @@ H2 {
 }
 
 .navbar {
-    width: 97%;
+    width: 98%;
     background-color: #222;
     padding: 15px 30px;
 
