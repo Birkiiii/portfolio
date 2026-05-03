@@ -1,6 +1,6 @@
 body {
     padding-top: 80px;
-    background-color: #e2e1d8;
+    background-color: oklch(0.14 0.01 0 / 1);
 }
 
 #name {
@@ -11,7 +11,7 @@ h1 {
     color: aliceblue;
 }
 
-H2 {
+h2 {
     color: aliceblue;
 }
 
@@ -32,22 +32,28 @@ H2 {
 
 #dp{
     width: 100%;
-    max-width: 400px;
+    max-width: 300px;
     object-fit: cover;
     vertical-align: middle;
 }
 
 .wrapper{
     padding: 0 15px;
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
     gap: 5rem;
+    padding-left: 200px;
 }
 
 .intro{
-    flex: 1;
+    flex: 2;
+}
+
+#name{
+    display: inline;
+    justify-content: center;    
 }
 
 .p1{
@@ -106,7 +112,7 @@ H2 {
 }
 
 .logo {
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 24px;
     font-weight: bold;
 }
@@ -121,7 +127,7 @@ H2 {
 
 .nav-links a {
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 15px;
     padding: 6px 10px;
 }
