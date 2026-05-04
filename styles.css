@@ -28,11 +28,13 @@ h2 {
 #name {
     color: #ffffff;
     font-family: "Roboto Mono", monospace;
+    font-size: 50px;
 }
 
 #Lname {
     color: #ffffff;
     font-family: "Roboto Mono", monospace;
+    font-size: 40px;
 }
 
 #shortintro{
@@ -46,7 +48,7 @@ h2 {
     object-fit: cover;
     vertical-align: middle;
     border-radius: 50%;
-    border: 10px solid #1e96fc;
+    border: 5px solid #1e96fc;
 }
 
 .wrapper{
@@ -61,12 +63,6 @@ h2 {
     flex: 2;
 }
 
-#name{
-    display: inline;
-    justify-content: center;    
-    color: white;
-}
-
 .p1{
    
     color:#222;
@@ -77,37 +73,12 @@ h2 {
     font-size: 20px;
 }
 
-.sbox-skill{
-    color: #222;
-    font-family: "Noto sans", sans-serif;
-    font-style: italic;
-    font-weight: 500;
-    margin-right:8cm;
-    font-size: 30px;
-}
-
 .contacts {
     color: #222;
     font-family: "Noto sans", sans-serif;
     font-weight: 700;
     font-size: 30px;  
 }
-
-.sbox-contact{
-    color: #222;
-    font-family: "Noto sans", sans-serif;
-    font-style: italic;
-    font-weight: 500;
-    margin-right:8cm;
-    font-size: 30px;
-}
-
-.ab-btn{
-    padding: 10px 20px;
-    font-size: 16px;
-
-}
-
     /*Navigation bar*/
 
 * {
