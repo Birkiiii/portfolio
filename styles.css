@@ -1,10 +1,5 @@
 body {
-    padding-top: 80px;
     background-color: oklch(0.14 0.01 0 / 1);
-}
-
-#name {
-    color: #222;
 }
 
 h1 {
@@ -28,23 +23,38 @@ h2 {
      
 }
 
-/* About me Page */
+/* Profile */
+
+#name {
+    color: #ffffff;
+    font-family: "Roboto Mono", monospace;
+}
+
+#Lname {
+    color: #ffffff;
+    font-family: "Roboto Mono", monospace;
+}
+
+#shortintro{
+    color: #ffffff;
+}
 
 #dp{
     width: 100%;
+    height: 100%;
     max-width: 300px;
     object-fit: cover;
     vertical-align: middle;
+    border-radius: 50%;
+    border: 10px solid #1e96fc;
 }
 
 .wrapper{
-    padding: 0 15px;
+    padding: 105px;
     display: grid;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: space-around;
     gap: 5rem;
-    padding-left: 200px;
 }
 
 .intro{
@@ -54,6 +64,7 @@ h2 {
 #name{
     display: inline;
     justify-content: center;    
+    color: white;
 }
 
 .p1{
@@ -94,44 +105,51 @@ h2 {
 .ab-btn{
     padding: 10px 20px;
     font-size: 16px;
+
+}
+
+    /*Navigation bar*/
+
+* {
+    text-decoration: none;
 }
 
 .navbar {
-    width: 98%;
-    background-color: #222;
-    padding: 15px 30px;
+    background-color: #1e96fc;
+    font-family: calibri;
+    padding-right: 15px;
+    padding-left: 30px;
+}
 
+.navdiv{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* allows navbar items to wrap */
-    
-    position: fixed;
-    top: 0;
-    left: 0;
+    justify-content: space-between;
 }
 
-.logo {
+.logo a{
     color: rgb(255, 255, 255);
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Roboto Mono", monospace;
 }
 
-.nav-links {
+li {
     list-style: none;
-    display: flex;
-    gap: 20px;
-    margin-left: auto;
-    flex-wrap: wrap; /* buttons go to next line if needed */
+    display: inline-block;
 }
 
-.nav-links a {
+li a {
     text-decoration: none;
     color: rgb(255, 255, 255);
-    font-size: 15px;
-    padding: 6px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 25px;
+    font-family: "Roboto Mono", monospace;
 }
 
 .nav-links a:hover {
-    color: rgb(218, 78, 101);
+    color: #222;
 }
+
+    /*End of Navigation bar*/
