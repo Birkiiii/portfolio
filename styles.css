@@ -1,5 +1,9 @@
+
+
+/* Index */
+
 body {
-    background-color: oklch(0.14 0.01 0 / 1);
+    background-color: #232323;
 }
 
 h1 {
@@ -10,17 +14,28 @@ h2 {
     color: aliceblue;
 }
 
-.box{
-    width: 200px;
-    height: 200px;
-}  
+/* About Me */
+
+
+.abm-div{
+    text-align: center;
+}
 
 .Aboutme{
-    color:#222;
+    color:#ffffff;
     font-family: "Noto sans", sans-serif;
     font-weight: 700;
-    font-size: 30px;  
-     
+    font-size: 30px;      
+}
+
+.abm1{
+   
+    color:#ffffff;
+    font-family: "Noto sans", sans-serif;
+    font-weight: 500;
+    margin-left:8cm ;
+    margin-right:8cm;
+    font-size: 20px;
 }
 
 /* Profile */
@@ -29,16 +44,20 @@ h2 {
     color: #ffffff;
     font-family: "Roboto Mono", monospace;
     font-size: 50px;
+    text-align: center;
 }
 
 #Lname {
     color: #ffffff;
     font-family: "Roboto Mono", monospace;
     font-size: 40px;
+    text-align: center;
 }
 
 #shortintro{
     color: #ffffff;
+    text-align: center;
+    font-family: "Pixelify Sans", sans-serif;
 }
 
 #dp{
@@ -52,25 +71,17 @@ h2 {
 }
 
 .wrapper{
-    padding: 105px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
     display: grid;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 5rem;
+
 }
 
 .intro{
     flex: 2;
-}
-
-.p1{
-   
-    color:#222;
-    font-family: "Noto sans", sans-serif;
-    font-style: italic;
-    font-weight: 500;
-    margin-right:8cm;
-    font-size: 20px;
 }
 
 .contacts {
@@ -90,6 +101,7 @@ h2 {
     font-family: calibri;
     padding-right: 15px;
     padding-left: 30px;
+    backdrop-filter: blur(8px);
 }
 
 .navdiv{
@@ -119,8 +131,9 @@ li a {
     font-family: "Roboto Mono", monospace;
 }
 
-.nav-links a:hover {
+.navdiv a:hover {
     color: #222;
+    text-decoration: none;
 }
 
     /*End of Navigation bar*/
