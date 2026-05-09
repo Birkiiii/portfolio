@@ -42,44 +42,44 @@ h2 {
         padding: 40px;
         position: sticky;
         top: 100px;
-    }
+        }
 
-    #dp{
-    width: 220px;
-    height: 220%;
-    object-fit: cover;
-    vertical-align: middle;
-    border-radius: 50%;
-    }
+        #dp{
+        width: 220px;
+        height: 220%;
+        object-fit: cover;
+        vertical-align: middle;
+        border-radius: 50%;
+        }
 
-    #name {
-    color: #ffffff;
-    font-family: "Roboto Mono", monospace;
-    font-size: 35px;
-    margin-top: 0.5;
-    }
+        #name {
+        color: #ffffff;
+        font-family: "Roboto Mono", monospace;
+        font-size: 35px;
+        margin-top: 0.5;
+        }
 
-    #Lname {
-    color: #ffffff;
-    font-family: "Roboto Mono", monospace;
-    font-size: 35px;
-    margin-top: 0;
-    }
+        #Lname {
+        color: #ffffff;
+        font-family: "Roboto Mono", monospace;
+        font-size: 35px;
+        margin-top: 0;
+        }
 
-    .line {
-    width: 200px;
-    height: 4px;
-    background-color: #1e96fc;
-    margin: 20px auto;
-    border-radius: 10px;
-    }
+        .line {
+        width: 200px;
+        height: 4px;
+        background-color: #1e96fc;
+        margin: 20px auto;
+        border-radius: 10px;
+        }
 
-    #shortintro{
-    color: #ffffff;
-    text-align: center;
-    font-family: "Roboto Mono", monospace;
-    font-size: 28px;
-}
+        #shortintro{
+        color: #ffffff;
+        text-align: center;
+        font-family: "Roboto Mono", monospace;
+        font-size: 28px;
+    }
 
     /*RIGHT CARD*/
 
