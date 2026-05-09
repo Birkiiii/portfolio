@@ -283,6 +283,34 @@ li a {
     text-align: center;
 }
 
+   /*Tech stack card*/
+
+.tech-stack-container{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 25px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    margin: 6cm;
+}
+
+.tech-card{
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+    background-color: #2b2b2b;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+}
+
+.tech-card img{
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
     /*Certifications*/
 
     .certifications{
