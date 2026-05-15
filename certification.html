@@ -47,17 +47,60 @@
 
 <div class="flex flex-wrap justify-center gap-10 p-10 mx-12">
 
-  <div class="w-[420px] h-[300px] rounded-[20px] bg-[#2b2b2b] flex justify-center items-center shadow-lg transition duration-300 ease-in-out relative z-10 hover:scale-110 hover:shadow-2xl hover:z-20 p-5">
-    <img src="images/Word Certidication-1.png" class="w-full h-full object-contain">
-  </div>
+  <div class="group relative w-[420px] h-[300px] rounded-[20px] bg-[#2b2b2b] 
+            flex justify-center items-center p-5
+            shadow-[0_8px_20px_#00000066]
+            transition duration-300 ease-in-out
+            hover:scale-110 hover:shadow-[0_15px_30px_#00000088] hover:z-20">
 
-  <div class="w-[420px] h-[300px] rounded-[20px] bg-[#2b2b2b] flex justify-center items-center shadow-lg transition duration-300 ease-in-out relative z-10 hover:scale-110 hover:shadow-2xl hover:z-20 p-5">
-    <img src="images/PPT Certificate-1.png" class="w-full h-full object-contain">
-  </div>
+  <!-- IMAGE (click to enlarge) -->
+  <img src="images/Word Certidication-1.png"
+       class="w-full h-full object-contain cursor-pointer"
+       onclick="openModal(this.src)">
+
+  <!-- BUTTON (hover popup) -->
+  <button class="absolute bottom-4 left-1/2 -translate-x-1/2
+                 bg-[#1e96fc] text-white px-4 py-2 rounded-lg
+                 opacity-0 group-hover:opacity-100
+                 translate-y-2 group-hover:translate-y-0
+                 transition duration-300 shadow-md
+                 bg-[#1e96fc] hover:bg-[#187ad1]">
+    View Certificate
+  </button>
+
+</div>
+
+  <div class="group relative w-[420px] h-[300px] rounded-[20px] bg-[#2b2b2b] 
+            flex justify-center items-center p-5
+            shadow-[0_8px_20px_#00000066]
+            transition duration-300 ease-in-out
+            hover:scale-110 hover:shadow-[0_15px_30px_#00000088] hover:z-20">
+
+  <!-- IMAGE (click to enlarge) -->
+  <img src="images/PPT Certificate-1.png"
+       class="w-full h-full object-contain cursor-pointer"
+       onclick="openModal(this.src)">
+
+  <!-- BUTTON (hover popup) -->
+  <button class="absolute bottom-4 left-1/2 -translate-x-1/2
+                 bg-[#1e96fc] text-white px-4 py-2 rounded-lg
+                 opacity-0 group-hover:opacity-100
+                 translate-y-2 group-hover:translate-y-0
+                 transition duration-300 shadow-md
+                 bg-[#1e96fc] hover:bg-[#187ad1]">
+    View Certificate
+  </button>
+
+</div>
 
 </div>
 
 <br>
+
+<div id="modal" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center z-50">
+  <img id="modalImg" class="max-w-[90%] max-h-[90%] rounded-lg shadow-2xl">
+</div>
+
 <script src="script.js"></script> 
 </body>
 </html>

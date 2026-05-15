@@ -12,3 +12,20 @@ document.querySelectorAll(".nav-link").forEach(n => n.
         navLinks.classList.remove("active")
     })
 )
+
+function openModal(src) {
+  const modal = document.getElementById("modal");
+  const modalImg = document.getElementById("modalImg");
+
+  modalImg.src = src;
+  modal.classList.remove("hidden");
+}
+
+// close modal when clicking outside image
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById("modal");
+
+  modal.addEventListener("click", function () {
+    modal.classList.add("hidden");
+  });
+});
