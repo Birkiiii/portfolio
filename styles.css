@@ -391,21 +391,21 @@ li a {
 
 /*Teck Stack*/
 
-.techstack{
+.techstack {
     line-height: 0.9;
 }
 
-.Tech{
-    color:#ffffff;
+.Tech {
+    color: #ffffff;
     font-family: "Alfa Slab One", serif;
     font-weight: 500;
     font-size: 80px;    
     margin-bottom: 0; 
-    margin-top: 1;
+    margin-top: 1px;
 }
 
-.Stack{
-    color:#1e96fc;
+.Stack {
+    color: #1e96fc;
     font-family: "Alfa Slab One", serif;
     font-weight: 500;
     font-size: 80px; 
@@ -414,63 +414,210 @@ li a {
     padding-left: 100px;       
 }
 
-.ts-div{
+.ts-div {
     text-align: center;
 }
 
-   /*Tech stack card*/
-
-   .tech-stack-container{
+/* --- Responsive Tech Stack Grid Container --- */
+.tech-stack-container {
+    /* Changed from grid to flex to allow individual wrapping lines to center */
     display: flex;
-    flex-wrap: wrap;   /* IMPORTANT */
+    flex-wrap: wrap; 
     justify-content: center;
-    gap: 40px;
-
-    padding: 40px;
-    margin-left: 3cm;
-    margin-right: 3cm;
+    
+    /* Grid gap properties replaced with flex equivalents */
+    gap: 40px; 
+    
+    overflow: visible; 
+    padding: 10px 10%; 
+    margin: 0 auto;
+    max-width: 1400px;
+    
+    transition: all 0.4s ease; 
 }
 
-.tech-card{
+.tech-card {
     width: 300px;
     height: 220px;
+    flex-shrink: 0;
+    
     border-radius: 20px;
     background-color: #2b2b2b;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     box-shadow: 0 8px 20px #00000066;
 
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Added margin-bottom to transition list */
+    transition: transform 0.4s ease, box-shadow 0.4s ease, margin-bottom 0.4s ease;
     position: relative;
+
+    overflow: visible; 
     z-index: 1;
 }
 
-.tech-card:hover{
+/* Pushes everything below downward on hover */
+.tech-card:hover {
+    transform: translateY(-10px);
     box-shadow: 0 15px 30px #00000088;
-    transform: scale(1.1);
-    z-index: 10;
+    z-index: 999; 
+    
+    /* Creates the space needed for the info box to drop into natively */
+    margin-bottom: 140px; 
 }
 
-
-.tech-card img{
+/* LOGO */
+.tech-card img {
     width: 70px;
     height: 70px;
     object-fit: contain;
+    transition: 0.3s ease;
 }
 
-#csslogo{
+/* MOVE LOGO UP */
+.tech-card:hover img {
+    transform: translateY(-40px);
+}
+
+/* POPUP INFO BOX */
+.tech-info {
+    position: absolute;
+    bottom: -130px; /* Positions box cleanly inside the dynamic margin gap */
+
+    width: 100%;
+    padding: 20px;
+
+    background: #3a3a3a;
+    border-radius: 20px;
+
+    text-align: center;
+    box-sizing: border-box;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.4s ease;
+}
+
+/* SHOW INFO */
+.tech-card:hover .tech-info {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* TITLE */
+.tech-info h2 {
+    color: white;
+    font-family: "Roboto Mono", monospace;
+    margin-bottom: 10px;
+}
+
+/* DESCRIPTION */
+.tech-info p {
+    color: #d6d6d6;
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: Arial, sans-serif;
+}
+
+/* CUSTOM LOGOS */
+#csslogo {
     width: 60px;
     height: 60px;
-    object-fit: contain;
 }
 
-#javalogo{
+#javalogo {
     width: 90px;
     height: 90px;
-    object-fit: contain;
 }
 
+#fe, #be, #tl {
+    font-family: "Roboto Mono", monospace;
+    font-weight: 400;
+    color: #ffffff;
+    
+    margin-top: 60px;   
+    margin-bottom: 20px; 
+    
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #1e96fc; /* The blinking cursor */
+    
+    /* Centering logic */
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    
+    /* FIX: Force the browser to shrink-wrap the container to the content */
+    width: min-content; 
+}
+
+/* Individual character limits + Animation Triggers */
+#fe {
+    width: 20ch;
+    max-width: 20ch; /* FIX: Hard lock the width */
+    animation: type-delete 5s steps(20) infinite, blink 0.75s step-end infinite;
+}
+
+#be {
+    width: 19ch;
+    max-width: 19ch; /* FIX: Hard lock the width */
+    animation: type-delete 5s steps(19) infinite, blink 0.75s step-end infinite;
+}
+
+#tl {
+    width: 17ch;
+    max-width: 17ch; /* FIX: Hard lock the width */
+    animation: type-delete 5s steps(17) infinite, blink 0.75s step-end infinite;
+}
+
+/* Timeline logic for typing out, pausing, deleting, and pausing again */
+@keyframes type-delete {
+    0%, 100% { width: 0; }       
+    45% { width: 100%; }         
+    55% { width: 100%; }         
+    90% { width: 0; }            
+}
+
+/* Cursor Blink Keyframes */
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: #1e96fc; }
+}
+
+   /*RESPONSIVE MEDIA QUERIES (Mobile & Tablet Optimization)*/
+
+@media (max-width: 768px) {
+    .Tech, .Stack {
+        font-size: 45px;
+    }
+    
+    .Stack {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .tech-stack-container {
+        padding: 10px 15px;
+        /* Replaced grid configuration with tight mobile flex gaps */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    #fe, #be, #tl {
+        margin-top: 40px;
+        font-size: 24px;
+    }
+
+    /* FIX: Re-enforce maximum widths on mobile viewports */
+    #fe { width: 20ch; max-width: 20ch; }
+    #be { width: 19ch; max-width: 19ch; }
+    #tl { width: 17ch; max-width: 17ch; }
+}
     /*Certifications*/
 
     .certifications{
