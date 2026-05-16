@@ -587,7 +587,7 @@ li a {
             font-size: 22px;
             margin: 0;
             transition: 0.3s ease;
-            padding-right: 5px;
+            padding-right: 10px;
         }
 
         .tech-card:hover h3 {
