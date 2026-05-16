@@ -29,3 +29,27 @@ document.addEventListener("DOMContentLoaded", function () {
     modal.classList.add("hidden");
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+        const cards = document.querySelectorAll('.tech-card');
+
+        cards.forEach(card => {
+            card.addEventListener('click', (e) => {
+                // Safeguard against inner container description interaction triggers
+                if (e.target.closest('.tech-info')) return;
+
+                // Close other opened panels to keep view clean
+                cards.forEach(c => { if (c !== card) c.classList.remove('clicked'); });
+
+                // Toggle click assignment class
+                card.classList.toggle('clicked');
+            });
+        });
+
+        // Background tracking to dismiss components if clicking empty canvas space
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.tech-card')) {
+                cards.forEach(card => card.classList.remove('clicked'));
+            }
+        });
+    });

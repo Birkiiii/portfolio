@@ -168,6 +168,9 @@
   }
 }
 @layer utilities {
+  .collapse {
+    visibility: collapse;
+  }
   .absolute {
     position: absolute;
   }
@@ -198,6 +201,12 @@
   .z-50 {
     z-index: 50;
   }
+  .row-30 {
+    grid-row: 30;
+  }
+  .row-70 {
+    grid-row: 70;
+  }
   .container {
     width: 100%;
     @media (width >= 40rem) {
@@ -218,6 +227,9 @@
   }
   .mx-12 {
     margin-inline: calc(var(--spacing) * 12);
+  }
+  .block {
+    display: block;
   }
   .flex {
     display: flex;
