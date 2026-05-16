@@ -267,6 +267,13 @@ a:active {
 
     padding-right: 15px;
     padding-left: 30px;
+
+    position: relative;
+    z-index: 9999; /* ADD THIS */
+}
+
+.nav-links{
+    z-index: 9999;
 }
 
 .navdiv{
@@ -310,6 +317,8 @@ li a {
 .hamburger{
     display: none;
     cursor: pointer;
+    position: relative;
+    z-index: 10000;
 }
 
 .bar{
@@ -742,14 +751,14 @@ li a {
         }
     /*Certifications*/
 
-    .certifications{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0px;
-        flex-wrap: wrap;
-        padding-top: 50px;
-    }
+    .certifications {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 10px;
+}
 
 
     .certi{
