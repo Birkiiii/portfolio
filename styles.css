@@ -581,6 +581,19 @@ li a {
             z-index: 1;
         }
 
+        .tech-card h3 {
+            color: white;
+            font-family: "Roboto Mono", monospace;
+            font-size: 22px;
+            margin: 0;
+            transition: 0.3s ease;
+            padding-right: 5px;
+        }
+
+        .tech-card:hover h3 {
+            transform: translateY(-5px);
+        }
+
         /* --- VISUAL HOVER EFFECTS ONLY (No structural layout jumps) --- */
         .tech-card:hover {
             transform: scale(1.03) translateY(-5px); 
