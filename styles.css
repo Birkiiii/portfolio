@@ -211,6 +211,10 @@ h2 {
         vertical-align: middle;
     }
 
+    .logotext{
+       font-family: "Roboto Mono", monospace;
+    }
+
 a,
 a:visited,
 a:active {
@@ -401,7 +405,7 @@ li a {
         color: #d6d6d6;
         font-size: 16px;
         line-height: 1.6;
-        font-family: Arial, sans-serif;
+        font-family: "Roboto Mono", monospace;
         margin: 0;
     }
 
@@ -644,6 +648,12 @@ li a {
 
             transition: 0.4s ease;
         }
+
+        .deft{
+           font-family: "Roboto Mono", monospace; 
+        }
+
+
 
         /* DISPLAY RULES ON CLICK EXCLUSIVELY */
         .tech-card.clicked .tech-info {
