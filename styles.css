@@ -180,17 +180,17 @@ h2 {
         
     }
 
-    .contacts {
-        color: #222;
+    #contacts {
+        color: #ffffff;
         font-family: "Noto sans", sans-serif;
         font-weight: 700;
         font-size: 35px;  
-        text-align: center;
+        text-align:left;
         margin-bottom: 20px;
     }
 
     .line2 {
-        width: 400px;
+        width: 600px;
         max-width: 400px;
         height: 4px;
         background-color: #1e96fc;
@@ -687,7 +687,7 @@ li a {
             height: 90px;
         }
 
-        /* TYPING TYPOGRAPHY SETUP */
+        /* TECH SECTION HEADINGS */
         #fe, #be, #tl {
             font-family: "Roboto Mono", monospace;
             font-weight: 400;
@@ -696,54 +696,24 @@ li a {
             margin-top: 60px;   
             margin-bottom: 20px; 
             
-            white-space: nowrap;
-            overflow: hidden;
-            border-right: 3px solid #1e96fc; 
-            
             margin-left: auto;
             margin-right: auto;
             display: block;
-            width: 0; 
-            
-            width: min-content; 
+            width: auto;
         }
 
-        /* Individual character limits + Animation Triggers */
         #fe {
-            width: 20ch;
             max-width: 20ch;
-            animation: type-delete 5s steps(20) infinite, blink 0.75s step-end infinite;
         }
 
         #be {
-            width: 19ch;
             max-width: 19ch;
-            animation: type-delete 5s steps(19) infinite, blink 0.75s step-end infinite;
         }
 
         #tl {
-            width: 17ch;
             max-width: 17ch;
-            animation: type-delete 5s steps(17) infinite, blink 0.75s step-end infinite;
         }
 
-        /* Timeline logic for typing loop cycle */
-        @keyframes type-delete {
-            0%, 100% { width: 0; }       
-            45% { width: 100%; }         
-            55% { width: 100%; }         
-            90% { width: 0; }            
-        }
-
-        /* Cursor Blink Keyframes */
-        @keyframes blink {
-            from, to { border-color: transparent; }
-            50% { border-color: #1e96fc; }
-        }
-
-        /* ==========================================================================
-           RESPONSIVE MEDIA QUERIES (Mobile & Tablet Optimization)
-           ========================================================================== */
 
         @media (max-width: 768px) {
             .Tech, .Stack {
@@ -768,9 +738,9 @@ li a {
                 font-size: 24px;
             }
 
-            #fe { width: 20ch; max-width: 20ch; }
-            #be { width: 19ch; max-width: 19ch; }
-            #tl { width: 17ch; max-width: 17ch; }
+            #fe { width: auto; max-width: 20ch; }
+            #be { width: auto; max-width: 19ch; }
+            #tl { width: auto; max-width: 17ch; }
         }
     /*Certifications*/
 
