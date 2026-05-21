@@ -6,6 +6,21 @@ body {
     margin: 0;
     background: #202020;
     overflow-x: hidden;
+    min-height: 100vh;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img,
+svg,
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* PARTICLE CONTAINER */
@@ -115,7 +130,7 @@ h2 {
     /*WRAPPER*/
 
     .wrapper{
-        width: 90%;
+        width: min(100%, 1400px);
         max-width: 1400px;
         margin: 50px auto;
         display: flex;
@@ -124,6 +139,7 @@ h2 {
         align-items: flex-start;
         gap: 50px;
         min-height: 100vh;
+        padding: 0 20px;
     }
 
     /*LEFT CARD*/
@@ -137,10 +153,13 @@ h2 {
         }
 
         #dp{
-        width: 220px;
-        height: 220%;
+        width: 100%;
+        max-width: 220px;
+        height: auto;
+        aspect-ratio: 1 / 1;
         object-fit: cover;
         border-radius: 50%;
+        margin: 0 auto;
         }
 
         #name,
@@ -233,11 +252,22 @@ a:active {
         flex-direction: column;
         align-items: center;
         gap: 30px;
+        width: 100%;
+        margin: 20px auto;
+        padding: 0 16px;
+    }
+
+    .left-container,
+    .right-container {
+        flex: 1 1 100%;
+        max-width: 100%;
+        width: 100%;
+        padding: 24px;
     }
 
     #dp {
         width: 180px;
-        height: 180px;
+        height: auto;
     }
 
     #name,
@@ -247,17 +277,53 @@ a:active {
 
     #shortintro {
         font-size: 20px;
+        line-height: 1.4;
     }
 
     .contacts {
         font-size: 28px;
+        text-align: center;
+    }
+
+    .line,
+    .line2 {
+        width: min(80%, 320px);
     }
 
     .right-container p {
         font-size: 18px;
+        margin: 18px 0;
     }
 }
 
+@media (max-width: 480px) {
+    .wrapper {
+        padding: 0 12px;
+        gap: 24px;
+    }
+
+    .left-container,
+    .right-container {
+        padding: 18px;
+    }
+
+    #dp {
+        width: 150px;
+    }
+
+    #name,
+    #Lname {
+        font-size: 24px;
+    }
+
+    #shortintro {
+        font-size: 18px;
+    }
+
+    .contacts {
+        font-size: 24px;
+    }
+}
     /*Navigation bar*/
 
 * {
@@ -278,12 +344,20 @@ a:active {
 
 .nav-links{
     z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }
 
 .navdiv{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    flex-wrap: nowrap;
 }
 
 .logo{
@@ -344,6 +418,7 @@ li a {
        ABOUT ME PORTRAIT ASYMMETRIC GRID SYSTEM
        ========================================================================== */
     .abm-div {
+        width: min(100%, 1200px);
         max-width: 1200px;
         margin: 0 auto;
         padding: 60px 24px;
@@ -388,7 +463,8 @@ li a {
     .abm1 { grid-area: text1; }
     .card-right1 { grid-area: img1; }
     .abm2 { grid-area: text2; }
-    .card-right2 { grid-area: img2; }
+    .card-right { grid-area: img1; }
+    .card-left { grid-area: img2; }
 
     /* Base Text Settings */
     .abm-box {
@@ -550,6 +626,7 @@ li a {
 
         /* --- Responsive Tech Stack Container --- */
         .tech-stack-container {
+            width: min(100%, 1400px);
             display: flex;
             flex-wrap: wrap; 
             justify-content: center;
@@ -564,9 +641,10 @@ li a {
         }
 
         .tech-card {
-            width: 300px;
+            flex: 1 1 260px;
+            max-width: 320px;
+            min-width: 220px;
             height: 220px;
-            flex-shrink: 0;
             cursor: pointer; /* Explicit click affordance hint */
             
             border-radius: 20px;
@@ -745,6 +823,8 @@ li a {
     /*Certifications*/
 
     .certifications {
+    width: min(100%, 90%);
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -773,13 +853,25 @@ li a {
     }
 
     .cert-div{
+        width: min(100%, 90%);
+        margin: 0 auto;
         text-align: center;
     }
 
 
     @media(max-width:768px){
+        .navdiv {
+            position: relative;
+            justify-content: flex-start;
+        }
+
         .hamburger{
             display:block;
+            position: absolute;
+            right: 24px;
+            top: 50%;
+            transform: translateY(-50%);
+            padding-right: 0;
         }
     
         .nav-links{
@@ -814,5 +906,10 @@ li a {
         .nav-links a:hover{
             color:#1e96fc;
             text-decoration:none;
-    }
+        }
+
+        .certi,
+        .fications {
+            font-size: clamp(48px, 6vw, 80px);
+        }
     }
