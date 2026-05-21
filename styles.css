@@ -342,6 +342,22 @@ a:active {
     z-index: 9999; /* ADD THIS */
 }
 
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background: rgba(15, 15, 15, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+header .navdiv {
+    min-height: 70px;
+    align-items: center;
+}
+
 .nav-links{
     z-index: 9999;
     display: flex;
@@ -622,6 +638,13 @@ li a {
 
         .ts-div {
             text-align: center;
+            width: min(100%, 90%);
+            margin: 60px auto 0;
+            padding-top: 20px;
+        }
+
+        .techstack {
+            margin-bottom: 20px;
         }
 
         /* --- Responsive Tech Stack Container --- */
@@ -834,28 +857,28 @@ li a {
 }
 
 
-    .certi{
+    .cert-heading{
         color:#ffffff;
         font-family: "Alfa Slab One", serif;
         font-weight: 500;
-        font-size: 80px;    
+        font-size: clamp(32px, 6vw, 80px);
+        line-height: 1.05;
         margin: 0;
         padding: 0;
-    }
-
-    .fications{
-    color:#1e96fc;
-    font-family: "Alfa Slab One", serif;
-    font-weight: 500;
-    font-size: 80px; 
-    margin: 0;
-    padding: 0;
+        letter-spacing: 0.02em;
     }
 
     .cert-div{
         width: min(100%, 90%);
-        margin: 0 auto;
+        margin: 60px auto 0;
+        padding-top: 20px;
         text-align: center;
+    }
+
+    @media (max-width: 480px) {
+        .cert-heading {
+            font-size: 28px;
+        }
     }
 
     /* Certification cards should all remain the same size */
@@ -900,6 +923,18 @@ li a {
         .navdiv {
             position: relative;
             justify-content: flex-start;
+        }
+
+        .logo {
+            position: absolute;
+            left: 24px;
+            top: 50%;
+            transform: translateY(-50%);
+            padding-left: 0;
+        }
+
+        .logo a {
+            display: inline-block;
         }
 
         .hamburger{
